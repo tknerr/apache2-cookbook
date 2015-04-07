@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
+Chef::Log.error("Hey, I'm running on #{node.platform} and about to install #{node['apache']['package']}")
+
 package 'apache2' do
   package_name node['apache']['package']
 end
